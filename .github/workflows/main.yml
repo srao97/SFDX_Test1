@@ -39,7 +39,7 @@ jobs:
         run:  sfdx force:org:create -a actionsBuild -d 1-f config/project-scratch-def.json -s
       # Pushes all configurations to scratch org
       - name: Pushing source
-        run: sfdx force:source:push 1-f
+        run: sfdx force:source:push -f
       # Run all apex tests in our scratch org
       - name: Running apex tests
         run: sfdx force:apex:test:run -l RunLocalTests
