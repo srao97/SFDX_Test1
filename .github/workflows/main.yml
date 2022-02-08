@@ -36,7 +36,7 @@ jobs:
         run: sfdx force:config:set defaultdevhubusername=rao.lightning@gmail.com
       # creates an scratch  org to test our code
       - name: create scratch org
-        run:  sfdx force:org:create command -f config/project-scratch-def.json
+        run:  sfdx force:org:create -a actionsBuild -d 1 -f config/project-scratch-def.json -s
       # Pushes all configurations to scratch org
       - name: Pushing source
         run: sfdx force:source:push -f
