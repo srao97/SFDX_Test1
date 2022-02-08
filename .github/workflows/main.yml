@@ -40,6 +40,4 @@ jobs:
       # Pushes all configurations to scratch org
       - name: Pushing source
         run: sfdx force:source:push -f
-      # Delete scratch org after successful build
-      - name: Deleting scratch org 
-        run: sfdx force:org:delete -p
+      
