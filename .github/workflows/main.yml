@@ -40,9 +40,6 @@ jobs:
       # Pushes all configurations to scratch org
       - name: Pushing source
         run: sfdx force:source:push -f
-      # Run all apex tests in our scratch org
-      - name: Running apex tests
-        run: sfdx force:apex:test:run -l RunLocalTests
       # Delete scratch org after successful build
       - name: Deleting scratch org 
         run: sfdx force:org:delete -p
